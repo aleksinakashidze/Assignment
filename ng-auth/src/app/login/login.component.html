@@ -1,0 +1,54 @@
+<style>
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-2"></div>
+        <div class="col-lg-6 col-md-8 login-box">
+            <div class="col-lg-12 login-key">
+                <i class="fa fa-key" aria-hidden="true"></i>
+            </div>
+            <div class="col-lg-12 login-title">
+                ADMIN PANEL
+            </div>
+
+            <div class="col-lg-12 login-form">
+                <div class="col-lg-12 login-form">
+
+
+<form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+   
+        
+
+        <div class="col-lg-12 loginbttm">
+            <div class="col-lg-6 login-btm login-text">
+                <!-- Error Message -->
+                <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username or password.</div>
+            </div>
+            
+        </div>
+        
+        <br/>
+        <div class="form-group">
+        <label for="username" class="form-control-label">User name</label>
+        <input type="text" id="username" name="username" ngModel class="form-control" placeholder="User Name" required autofocus>
+         </div>
+        <br/>
+        <div class="form-group">
+        <label for="password" class="form-control-label">Password</label>
+        <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Password" required>
+        </div>
+        <br/>
+        <div class="col-lg-12 loginbttm">
+        <div class="col-lg-6 login-btm login-button">
+        <button class="btn btn-outline-primary" type="submit">Sign in</button>
+    </div>
+</div>
+    
+</form>
+</div>
+</div>
+<div class="col-lg-3 col-md-2"></div>
+</div>
+</div>

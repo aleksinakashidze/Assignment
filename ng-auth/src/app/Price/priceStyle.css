@@ -1,0 +1,103 @@
+.navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 33.3%; /* Four links of equal widths */
+    text-align: center;
+  }
+  
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  .navbar a.active {
+    background-color: #04AA6D;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+table.timecard {
+  table-layout: fixed;
+  width: 100%; 
+}
+table {
+  border: 3px solid green;
+}
+td {
+  border: 3px solid green;
+  padding: 15px;
+  text-align: left;
+  
+}
+th {
+  border: 3px solid green;
+  padding: 15px;
+  text-align: left;
+  font-size:20px;
+  
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px 90px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+li:last-child {
+  border-right: none;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #111;
+}
+.active {
+  background-color: #04AA6D;
+}
+.box select {
+  background-color:  green;
+  color: white;
+  padding: 12px;
+  width: 250px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}

@@ -1,0 +1,89 @@
+  
+  <div class="navbar">
+    <a  class="active" href="#" routerLink="/price">Company Price</a> 
+    <a href="#" routerLink="/products">Add Company</a> 
+    <a  href="#"  routerLink="/market">Add Market</a> 
+   <!--<a href="#">Login</a>-->
+  </div>
+   <!--<a href="#">Login</a>-->
+  
+<form class="form-horizontal" [formGroup]="productForm"  (ngSubmit)="onSubmit()">
+    <h1>Company Prices</h1>
+    <table style="width: 100%; border: 2px;">
+      <tbody>
+    <tr >
+      <td >
+       
+               <label >Name of Company :</label>
+          <br>
+          <div class="box">
+          <select [(ngModel)]="selectedValue1" formControlName="productID" >
+            <option *ngFor="let option of productList" [value]="option.productID"  placeholder="Product">
+              {{option.productName}}
+            </option>
+          </select>
+        </div>
+        
+     </td>
+     <td>
+   
+        <label >Name of Market :</label>
+        <br>
+        <div class="box">
+      
+          <select [(ngModel)]="selectedValue" formControlName="marketID"  id="aleksi" placeholder="market" >
+            <option *ngFor="let option of MarketList" [value]="option.marketID">
+              {{option.marketName}}
+            </option>
+          </select>
+        </div>
+   
+  </td>
+  <td  >
+    
+      <label >Name of Company :</label>
+      <br>
+     
+        <input type="text" id="txtPrice" formControlName="price"  placeholder="price">
+    
+  </td>
+  </tr >
+  <tr >
+       
+          <td  colspan="3" style="text-align:right" >
+         
+            <button type="submit" class="button" (click)="PostProduct(productForm.value)" style='margin-right:30px'>Submit</button> 
+            <button type="submit" class="button" (click)="UpdatePro(productForm.value)">Update</button>
+         
+        </td>
+      
+  </tr>
+    
+</tbody>
+</table>
+  
+    <div class="alert alert-info"><b>Price List</b></div>
+     
+        <table class="timecard">
+          <tr >
+            <th>Company Name</th>
+            <th>Market Name</th>
+            <th>Price</th>
+            <th>Edit</th>
+
+            
+          </tr>
+          
+          <tr *ngFor="let prd of PriceList" class="odd">
+            <td>{{prd.productName}}</td>
+            <td>{{prd.marketName}}</td>
+            <td>{{prd.price}}</td>
+            <td>
+              <button type="button" matTooltip="Click Edit Button" (click)="ProductDetailsToEdit(prd.priceID)">Edit</button>
+              <button type="button" matTooltip="Click Delete Button" (click)="DeleteProduct(prd.priceID)">Delete</button>
+            </td>
+          </tr>
+          
+        </table>
+  
+  </form>

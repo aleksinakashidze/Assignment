@@ -1,0 +1,36 @@
+
+  <div class="navbar">
+    <a href="#" routerLink="/price">Company Price</a> 
+    <a class="active" href="#" routerLink="/products">Add Company</a> 
+    <a href="#"  routerLink="/market">Add Market</a> 
+   <!--<a href="#">Login</a>-->
+  </div>
+<form  [formGroup]="productForm"  (ngSubmit)="onSubmit()">
+    <h1>Company</h1>
+    <div class="container">
+      <label   style="padding-top: 25px; font-size: 26px; width: 45%;" >Name of Company :</label>
+        <input type="text"  id="txtProductName" formControlName="productName" placeholder="Name of Product" style="width: 50%;">
+            <button type="submit" class="button" (click)="PostProduct(productForm.value)">Submit</button> 
+            <button type="submit" class="button" (click)="UpdateProduct(productForm.value)">Update</button>
+    </div>
+    <div>
+      <div class="alert alert-info"><b>Product List</b></div>
+      <div >
+        <table class="table">
+          <tr>
+            <th>Company Name</th>
+            <th>Company Edit</th>
+            
+          </tr>
+          <tr *ngFor="let prd of ProductList">
+            <td>{{prd.productName}}</td>
+            
+            <td><button type="button" matTooltip="Click Edit Button" (click)="ProductDetailsToEdit(prd.productID)">Edit</button>
+              |
+              <button type="button" matTooltip="Click Delete Button" (click)="DeleteProduct(prd.productID)">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </form>
