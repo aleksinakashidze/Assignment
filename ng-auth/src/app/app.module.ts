@@ -12,8 +12,9 @@ import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './products/products.component';
 import { MarketComponent } from './market/market.component';
-import { PriceComponent } from './Price/Price.component';
+// import { PriceComponent } from './Price/Price.component';
 import { AuthGuard } from './guards/auth-guard.service';
+import { PriceComponent } from './Price/price.component';
 
 
 export function tokenGetter() {

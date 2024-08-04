@@ -17,7 +17,8 @@
                <label >Name of Company :</label>
           <br>
           <div class="box">
-          <select [(ngModel)]="selectedValue1" formControlName="productID" >
+            <!-- [(ngModel)]="selectedValue1" -->
+          <select  formControlName="productID" >
             <option *ngFor="let option of productList" [value]="option.productID"  placeholder="Product">
               {{option.productName}}
             </option>
@@ -30,8 +31,8 @@
         <label >Name of Market :</label>
         <br>
         <div class="box">
-      
-          <select [(ngModel)]="selectedValue" formControlName="marketID"  id="aleksi" placeholder="market" >
+          <!-- [(ngModel)]="selectedValue" -->
+          <select  formControlName="marketID"  id="aleksi" placeholder="market" >
             <option *ngFor="let option of MarketList" [value]="option.marketID">
               {{option.marketName}}
             </option>
